@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # :registerable, :recoverable, :rememberable, :trackable, :validatable
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable,
-    :rememberable, :trackable, :validatable
+    :rememberable, :trackable, :validatable, :confirmable
 
   has_and_belongs_to_many :oauth_credentials
 end
