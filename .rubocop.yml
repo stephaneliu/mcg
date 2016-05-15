@@ -9,5 +9,8 @@ AllCops:
    - 'db/seeds.rb'
    - 'db/schema.rb'
    - 'vendor/bundle/**/*'
-  StringLiterals:
-    Enabled: false
+
+StringLiterals:
+  Enabled: false
+Documentation:
+  Enabled: false
