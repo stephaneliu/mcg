@@ -11,14 +11,25 @@ RSpec.describe User do
     expect(@user.email).to match email
   end
 
-  describe '.assignable_roles' do
-    subject { described_class.assignable_roles }
-    specify do
-      is_expected.to_not include('admin')
-      is_expected.to include('advisor')
-      is_expected.to include('captain')
-      is_expected.to include('guard')
-      is_expected.to include('user')
+  describe 'scopes' do
+    describe '.assignables' do
+      before do
+        create(:user, :admin)
+        create(:user, :advisor)
+        create(:user, :captain)
+        create(:user, :guard)
+        create(:user)
+      end
+
+      subject { described_class.assignables.map(&:role) }
+
+      specify do
+        is_expected.to_not include('admin')
+        is_expected.to include('advisor')
+        is_expected.to include('captain')
+        is_expected.to include('guard')
+        is_expected.to include('user')
+      end
     end
   end
 

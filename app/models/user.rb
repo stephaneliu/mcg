@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 
   after_initialize :set_default_role, if: :new_record?
 
+  scope :assignables, -> { where('role != ?', unassignable_role) }
+
   def set_default_role
     self.role ||= :user
   end
@@ -17,10 +19,6 @@ class User < ActiveRecord::Base
 
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
-  end
-
-  def self.assignable_roles
-    roles.keys.select { |role| role != unassignable_role }
   end
 
   def self.unassignable_role
