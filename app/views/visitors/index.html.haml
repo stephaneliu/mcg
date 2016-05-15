@@ -19,7 +19,9 @@
         %li
           %a{:href => "#contact"} Contact
         %li
-          =link_to 'login', new_user_session_path
+          =link_to 'Login', new_user_session_path
+        %li
+          =link_to 'Logout', destroy_user_session_path, method: :delete
     / /.navbar-collapse
   / /.container
 / Header

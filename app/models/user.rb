@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
     :rememberable, :trackable, :validatable, :confirmable
 
   has_and_belongs_to_many :oauth_credentials
+
+  def send_devise_notification(notification, *args)
+    devise_mailer.send(notification, self, *args).deliver_later
+  end
 end
