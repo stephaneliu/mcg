@@ -13,7 +13,7 @@ end
 
 # This group allows to skip running RuboCop when RSpec failed.
 group :red_green_refactor, halt_on_fail: true do
-  guard :rspec, cmd: "bundle exec rspec" do
+  guard :rspec, cmd: "rspec" do
     require "guard/rspec/dsl"
     dsl = Guard::RSpec::Dsl.new(self)
 
@@ -56,7 +56,7 @@ group :red_green_refactor, halt_on_fail: true do
     end
   end
 
-  guard :rubocop do
+  guard :rubocop, all_on_start: false do
     watch(%r{.+\.rb$})
     watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
   end

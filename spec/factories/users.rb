@@ -1,8 +1,15 @@
 FactoryGirl.define do
+  sequence(:email) { |n| "user_#{n}@test.com" }
+
   factory :user do
     name "Test User"
-    email "test@example.com"
+    email
     password "please123"
+    role 'user'
+
+    trait :admin do
+      role 'admin'
+    end
 
     trait :advisor do
       role 'advisor'
@@ -12,5 +19,8 @@ FactoryGirl.define do
       role 'captain'
     end
 
+    trait :guard do
+      role 'guard'
+    end
   end
 end

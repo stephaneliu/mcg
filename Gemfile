@@ -57,7 +57,6 @@ group :development do
   gem 'guard-bundler'
   # Guard your Rails to always be there. (https://github.com/ranmocy/guard-rails)
   gem 'guard-rails'
-  # Guard gem for RSpec (https://github.com/guard/guard-rspec)
   # Guard plugin for RuboCop (https://github.com/yujinakayama/guard-rubocop)
   gem 'guard-rubocop'
   # Guard gem for RSpec (https://github.com/guard/guard-rspec)
