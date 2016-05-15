@@ -1,3 +1,4 @@
+:concurrency: 10
 :queues:
   - default
   - [mailers, 2] # weight of 2 is checked twice as often as a queue of 1 (default)
