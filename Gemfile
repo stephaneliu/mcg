@@ -67,6 +67,8 @@ group :development do
   gem 'hub', require:nil
   # Turns off Rails asset pipeline log. (http://github.com/evrone/quiet_assets)
   gem 'quiet_assets'
+  # Insert LiveReload into your app easily as Rack middleware
+  gem 'rack-livereload'
   # Rails generator creates application layout files for Bootstrap and other frameworks. (http://github.com/RailsApps/rails_layout/)
   gem 'rails_layout'
   # A Ruby wrapper for Windows Kernel functions for monitoring the specified directory or subtree (http://github.com/stereobooster/rb-fchange)
