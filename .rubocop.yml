@@ -1,6 +1,4 @@
 AllCops:
-  Rails:
-    Enabled: true
   Include:
     - '**/Gemfile'
     - '**/Rakefile'
@@ -10,7 +8,11 @@ AllCops:
    - 'db/schema.rb'
    - 'vendor/bundle/**/*'
 
+Rails:
+  Enabled: true
 StringLiterals:
   Enabled: false
 Documentation:
   Enabled: false
+LineLength:
+  Max: 100
