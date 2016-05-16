@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
     devise_mailer.send(notification, self, *args).deliver_later
   end
 
+  def self.assignable_roles
+    roles.keys - [unassignable_role]
+  end
+
   def self.unassignable_role
     roles.keys.select { |role| role == 'admin' }.first
   end
