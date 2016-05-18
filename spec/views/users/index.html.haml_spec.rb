@@ -23,7 +23,6 @@ RSpec.describe 'users/index' do
     end
 
     it 'in a striped table' do
-      puts rendered
       users.each_with_index do |user, index|
         row = index + 1
         expect(rendered).to have_link('Edit', href: edit_user_path(user))

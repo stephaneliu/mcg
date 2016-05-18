@@ -1,0 +1,6 @@
+%tr
+  %td=link_to('Edit', edit_user_path(user), remote: true)
+  %td=user.name
+  %td=user.email
+  %td=user.confirmed?
+  %td=user.role

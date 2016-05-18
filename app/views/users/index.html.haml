@@ -5,16 +5,11 @@
     %table.table.table-striped.user-list
       %thead
         %tr
+          %th &nbsp
           %th Name
           %th Email
           %th Email Confirmed?
           %th Role
       %tbody
-        -@users.each do |user|
-          %tr
-            %td=link_to('Edit', edit_user_path(user), remote: true)
-            %td=user.name
-            %td=user.email
-            %td=user.confirmed?
-            %td=user.role
-
+        =render partial: 'user', collection: @users
+  .row#edit-user-modal.modal.fade{"aria-labelledby" => "edit-user-label", role: "dialog", :tabindex => "-1"}

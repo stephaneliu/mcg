@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @roles = User.assignable_roles
   end
 
   def update
