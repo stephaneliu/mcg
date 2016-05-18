@@ -1,6 +1,8 @@
 %tr
-  %td=link_to('Edit', edit_user_path(user), remote: true)
+  %td
+    =link_to(edit_user_path(user), remote: true) do
+      %i.fa.fa-pencil{'aria-hidden' => 'true'}
   %td=user.name
   %td=user.email
-  %td=user.confirmed?
   %td=user.role
+  %td=user.confirmed?

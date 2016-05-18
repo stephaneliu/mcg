@@ -8,7 +8,6 @@
       =simple_form_for user, remote: true do |f|
         =f.input :name
         =f.input :role, collection: roles
-        =f.button :submit, class: 'btn btn-success'
-
-    .modal-footer
-      %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Cancel
+        .modal-footer
+          %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Cancel
+          =f.button :submit, class: 'btn btn-success'
