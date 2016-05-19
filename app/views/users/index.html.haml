@@ -1,0 +1,17 @@
+.container
+  .row
+    %h1 Users
+  .row
+    #messages
+  .row
+    %table.table.table-striped.user-list
+      %thead
+        %tr
+          %th &nbsp
+          %th Name
+          %th Email
+          %th Role
+          %th Email Confirmed?
+      %tbody
+        =render partial: 'user', collection: @users
+  .row#edit-user-modal.modal.fade{"aria-labelledby" => "edit-user-label", role: "dialog", :tabindex => "-1"}
