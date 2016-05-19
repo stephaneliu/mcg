@@ -13,6 +13,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 # Simple Rails app configuration (https://github.com/laserlemon/figaro)
 gem 'figaro'
+# Font-Awesome SASS (https://github.com/FortAwesome/font-awesome-sass)
+gem 'font-awesome-sass', '~> 4.6.2'
 # Process manager for applications with multiple components (http://github.com/ddollar/foreman)
 gem 'foreman'
 # OO authorization for Rails (https://github.com/elabs/pundit)
