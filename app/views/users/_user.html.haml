@@ -1,7 +1,7 @@
-%tr
+%tr{ id: "user-#{user.id}" }
   %td
     =link_to(edit_user_path(user), remote: true) do
-      %i.fa.fa-pencil{'aria-hidden' => 'true'}
+      =icon('pencil', 'aria-hidden' => 'true')
   %td=user.name
   %td=user.email
   %td=user.role

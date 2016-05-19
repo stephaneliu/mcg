@@ -14,11 +14,11 @@ RSpec.describe UsersController do
   end
 
   describe '#edit' do
-    before     { get :edit, id: user.id }
-    let(:user) { create :user }
-
-    it do
-      expect(assigns(:user)).to eq(user)
-    end
+    # before     { get :edit, id: user.id }
+    # let(:user) { create :user }
+    #
+    # it do
+    #   expect(assigns(:user)).to eq(user)
+    # end
   end
 end
