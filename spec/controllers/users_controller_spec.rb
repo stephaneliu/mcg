@@ -14,11 +14,21 @@ RSpec.describe UsersController do
   end
 
   describe '#edit' do
-    # before     { get :edit, id: user.id }
-    # let(:user) { create :user }
-    #
-    # it do
-    #   expect(assigns(:user)).to eq(user)
-    # end
+    before     { xhr :get, :edit, id: user.id }
+    let(:user) { create :user }
+
+    it do
+      expect(assigns(:user)).to eq(user)
+    end
+  end
+
+  describe '#update' do
+    before { xhr :put, :update, id: user.id, user: { name: user.name, role: user.role } }
+    let(:user) { create :user }
+
+    it do
+      expect(assigns(:user)).to eq(user)
+      expect(flash[:notice]).to match(/success/)
+    end
   end
 end
