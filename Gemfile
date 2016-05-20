@@ -95,8 +95,8 @@ group :test do
   gem 'database_cleaner'
   # Launchy is helper class for launching cross-platform applications in a fire and forget manner. (http://github.com/copiousfreetime/launchy)
   gem 'launchy'
-  # The next generation developer focused tool for automated testing of webapps (https://github.com/seleniumhq/selenium)
-  gem 'selenium-webdriver'
+  # PhantomJS driver for Capybara (https://github.com/teampoltergeist/poltergeist)
+  gem 'poltergeist'
 end
 
 group :development, :test do

@@ -21,8 +21,8 @@ RSpec.feature 'User delete', :devise, :js do
     login_as(user, scope: :user)
 
     visit edit_user_registration_path(user)
-    click_button 'Cancel my account'
-    page.driver.browser.switch_to.alert.accept
+    page.accept_confirm { click_button 'Cancel my account' }
     expect(page).to have_content I18n.t 'devise.registrations.destroyed'
   end
+
 end
