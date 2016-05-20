@@ -4,7 +4,6 @@ require 'rails_helper'
 #   I want to visit a home page
 #   So I can learn more about the website
 RSpec.feature 'Home page' do
-
   # Scenario: Visit the home page
   #   Given I am a visitor
   #   When I visit the home page
@@ -13,5 +12,4 @@ RSpec.feature 'Home page' do
     visit root_path
     expect(page).to have_content 'Mililani High School Color Guard'
   end
-
 end

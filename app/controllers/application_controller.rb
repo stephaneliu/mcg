@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     session[:previous_url] = request.fullpath unless interacting_with_authentication
   end
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     session[:previous_url] || root_path
   end
 
@@ -19,11 +19,11 @@ class ApplicationController < ActionController::Base
   end
 
   def interacting_with_authentication
-    authentication_pattern = /\/users/
+    authentication_pattern = %r{/\/users/}
     request.fullpath =~ authentication_pattern
   end
 
-  private 
+  private
 
   def user_not_authorized(exception)
     policy_name = exception.policy.class.to_s.underscore

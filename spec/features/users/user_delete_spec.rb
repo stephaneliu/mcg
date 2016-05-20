@@ -24,5 +24,4 @@ RSpec.feature 'User delete', :devise, :js do
     page.accept_confirm { click_button 'Cancel my account' }
     expect(page).to have_content I18n.t 'devise.registrations.destroyed'
   end
-
 end
