@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.3.1
+bundler_args: --without production
+env:
+  - DATABASE_USERNAME: travis
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rspec spec
+services:
+  - mysql
+before_script:
+  - mysql -e 'create database mcg_test;'
+branches:
+  only:
+    - master
