@@ -9,6 +9,7 @@ script:
   - bundle exec rspec spec
 services:
   - mysql
+  - redis-server
 before_script:
   - mysql -e 'create database mcg_test;'
 branches:
