@@ -13,7 +13,7 @@ end
 
 # This group allows to skip running RuboCop when RSpec failed.
 group :red_green_refactor, halt_on_fail: true do
-  guard :rspec, cmd: "rspec", all_after_pass: true do
+  guard :rspec, cmd: "rspec", all_on_start: true, all_after_pass: true do
     require "guard/rspec/dsl"
     dsl = Guard::RSpec::Dsl.new(self)
 
