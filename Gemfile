@@ -9,6 +9,7 @@ gem 'rails', '4.2.6'
 gem 'bootstrap-sass'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
 gem 'coffee-rails', '~> 4.1.0'
+gem 'daemons'
 # Flexible authentication solution for Rails with Warden (https://github.com/plataformatec/devise)
 gem 'devise'
 # ActiveRecord backend for DelayedJob (http://github.com/collectiveidea/delayed_job_active_record)
