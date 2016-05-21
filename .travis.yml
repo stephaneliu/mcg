@@ -5,8 +5,6 @@ bundler_args: "--without production"
 env:
   matrix:
   - DATABASE_USERNAME: travis
-  code_climate:
-    secure: mVQ9wIJZ0pr5gvVFvheWCYFSW4CUvzfkdjmOorb4Lj/kbcXgLV7R67bLjcSRZnFy4ZCkx3fgA0drvI7wXsHPbxC5bVCqnZ6HyL/3wcXePcMP2tY7PYEIb8/cKCuWVEeprQmDVOKwDY+HJGEvhBto89IrzwnWTiRyd6rAOjyd4QKdJJmON8GXr/H/KweIflAu7QwC4KzJ5EucicGVMP1d2HbnSj7xVi5AWlSSame2VEtK9TxZyH7ktLvcG81tpYn4vSxzbg26HpbWep2pabpAeqfPRhmSw+8PVbYnoPH4imaETK+g7NCThXP9ck+oRFX7XjC6m7BhA/zeb3jwzqP+fzCYn39pr1XLYbsFI8q5JJigZcZEa6vJ6JdOWTV1Eoa0ALw7TG/mg9vJC+y4r1Pgx1IyDxd9ENAmE7MtnswiKgQDmS0sJmmUwYSMIz8sYi1aNiz0JdHE7ZDYsZEQinqoa4BMQu1aNqN1QLjqKI0hxJyODTLQBcZAmA/9irx0/TJ8KIO8TCQD6d9Mp4XNFhpW+p9tATOZ3W64n/TKQgbHNplAiC6syvpSYDKjehdGHpWiytTQDem5WXPToUfV7c6VYwAtE4mMpQRytBWglfeJZ9vwEXNwzaX2L8LBONvZPRJI34RZcxWcjPobYXG9s3wA5oBhCPGMrXn7WPVJyi4e7VA=
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - CODECLIMATE_REPO_TOKEN=<%= ENV['code_climate'] %> bundle exec rspec spec
@@ -18,3 +16,7 @@ before_script:
 branches:
   only:
   - master
+addons:
+  code_climate:
+    repo_token:
+      secure: yoKPWrGKnw2Zce7cclCghJuA2H6WFW8Eq3DJQZNLBa9ICxmhxX3ejCRDadAacnmsH17r27I3ZsoWMdSeFUCa/+zyt4MQMOauIcMVz49GbLCZRsF2CQXeE0Lp/D12/9jlYJhk0Weis6ebW+pt5GezEqiR+ovPI6ErYBgCWmcuZ3hyvEVz2bqMl2E+d/o4cS0u41v/iik5s4ewWJvPb9KUSzk6CRpa8ISloc0gdP2o5gStEl9KbLN/ZpyIux+h+gAEgMyi6c4mZFTZOHEU5PJejePzzVJajMNc2uv6l8MrOIRXj72uYRGB1v3/JwsdQNwrj3A+SaoK+rq9LshkK3PwQRUnNC0kpVQNjbMp6GFafA3RHbv9MDUFFx/JnisPi+5ZPPCvIBuMG/yPP3lhXNdOsFHtspIX3uddhzu6ae5OMiwTR/CVoeDm/lheVsE2K2qopThEibNpr/+oKsS3LIVMI9HoETdgAW3FukrunpLqqBx3xQ09ooAIjDSiAs1hfulnp6OO8a8GCZpF5VYJNVEE7eyJG95i1YGgHyv9o6PG2ae4SzLOHdhIpocP72jWgXap2sLEqebfHoylqu3V0cKpGofNz4tB5tgM0mXenmhXlXLXkSrXY8D65xkIaJyD88z6jZeuUaAWSv3MU9gMw7nADTBAXEAXlQpTNTGbbq44r/c=
