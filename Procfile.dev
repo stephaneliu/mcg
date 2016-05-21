@@ -1,1 +1,1 @@
-worker_dj: script/delayed_job start
+worker_dj: bin/delayed_job start
