@@ -1,17 +1,20 @@
 language: ruby
 rvm:
-  - 2.3.1
-bundler_args: --without production
+- 2.3.1
+bundler_args: "--without production"
 env:
+  matrix:
   - DATABASE_USERNAME: travis
+  code_climate:
+    secure: mVQ9wIJZ0pr5gvVFvheWCYFSW4CUvzfkdjmOorb4Lj/kbcXgLV7R67bLjcSRZnFy4ZCkx3fgA0drvI7wXsHPbxC5bVCqnZ6HyL/3wcXePcMP2tY7PYEIb8/cKCuWVEeprQmDVOKwDY+HJGEvhBto89IrzwnWTiRyd6rAOjyd4QKdJJmON8GXr/H/KweIflAu7QwC4KzJ5EucicGVMP1d2HbnSj7xVi5AWlSSame2VEtK9TxZyH7ktLvcG81tpYn4vSxzbg26HpbWep2pabpAeqfPRhmSw+8PVbYnoPH4imaETK+g7NCThXP9ck+oRFX7XjC6m7BhA/zeb3jwzqP+fzCYn39pr1XLYbsFI8q5JJigZcZEa6vJ6JdOWTV1Eoa0ALw7TG/mg9vJC+y4r1Pgx1IyDxd9ENAmE7MtnswiKgQDmS0sJmmUwYSMIz8sYi1aNiz0JdHE7ZDYsZEQinqoa4BMQu1aNqN1QLjqKI0hxJyODTLQBcZAmA/9irx0/TJ8KIO8TCQD6d9Mp4XNFhpW+p9tATOZ3W64n/TKQgbHNplAiC6syvpSYDKjehdGHpWiytTQDem5WXPToUfV7c6VYwAtE4mMpQRytBWglfeJZ9vwEXNwzaX2L8LBONvZPRJI34RZcxWcjPobYXG9s3wA5oBhCPGMrXn7WPVJyi4e7VA=
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - CODECLIMATE_REPO_TOKEN=<%= ENV['CODECLIMATE_REPO_TOKEN'] %> bundle exec rspec spec
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- CODECLIMATE_REPO_TOKEN=<%= ENV['code_climate'] %> bundle exec rspec spec
 services:
-  - mysql
-  - redis-server
+- mysql
+- redis-server
 before_script:
-  - mysql -e 'create database mcg_test;'
+- mysql -e 'create database mcg_test;'
 branches:
   only:
-    - master
+  - master
