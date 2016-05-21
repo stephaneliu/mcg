@@ -2,6 +2,8 @@ Mcg
 ================
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Code Climate](https://codeclimate.com/github/stephaneliu/mcg/badges/gpa.svg)](https://codeclimate.com/github/stephaneliu/mcg)
+[![Test Coverage](https://codeclimate.com/github/stephaneliu/mcg/badges/coverage.svg)](https://codeclimate.com/github/stephaneliu/mcg/coverage)
 [![Stories in In Progress](https://badge.waffle.io/stephaneliu/mcg.svg?label=In%20Progress&title=In%20Progress)](http://waffle.io/stephaneliu/mcg) 
 
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem

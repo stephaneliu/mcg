@@ -91,6 +91,7 @@ end
 group :test do
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/jnicklas/capybara)
   gem 'capybara'
+  gem 'codeclimate-test-reporter', require: nil
   # Strategies for cleaning databases.  Can be used to ensure a clean state for testing. (http://github.com/DatabaseCleaner/database_cleaner)
   gem 'database_cleaner'
   # Launchy is helper class for launching cross-platform applications in a fire and forget manner. (http://github.com/copiousfreetime/launchy)
