@@ -16,10 +16,14 @@ before_script:
 branches:
   only:
   - master
+# List of full options available https://docs.travis-ci.com/user/deployment/heroku/
 deploy:
   provider: heroku
+  app: mililanicolorguard
   api_key:
     secure: NmFl6fVcHlT+P97uF4nuMvCOkJY8T/SMF2ZB6Hb5FXfQniMhuMJ2uN8VZ0NUwq897jCyf9Mq9GT8iOdt2lnZPSkyGlxJ7m8laW+UXdHDGG/tuJjFhNk0Hk33aqBaZPqkJzBtfUOiVIqkN359tfUzWvgUtuUvaQox5E9CeYNghbI2yWJKURa8diWDofBA12G4vSnZT2pr6nUjOSXpVpD9npZNjaAvcBp4FMVvJd3kVFfjyjIp24oNPw3i4C/UjXNSNN8/Z2mSqLdVrebRLh6DesuE6Sgf8rRVR4yrPWoogsPwdvQ/yjcvMqkyamY6otrVgYh1ogLuunFRB+Pjz3Sw9VjqOfoLAF8iEceqnf53/jjvIMk5q6SB1HPJUTKgp4ZctIt3bjGngEjmbhpnk9Ru7QLp1vbFequ+GUoArk++aIdvbG9zG2vMK7t4BVC4tS6RZ770Ubi2+toX/cBQJjy1/07e77CGHD3gWy4PXC25+YdFQ+ZcxeXB5jyuluHTeSXGTkMHNVltATA2k+Zd668vaJgkxvaUBZ0y3s6XutH8YkUiThzzvBnFM6bWcxdZLxgZfmoR3AQ0K8GwskjwEwnufD3A4msH9eFap/1L5XQKY9i8cMg3RRIt8anke52Plyy4uE4Mw14gWvS6BUfyBPD+fLyD6R5bgD002w7jjBNSUHA=
+  run:
+    - "rake db:migrate"
 addons:
   code_climate:
     repo_token:
