@@ -11,6 +11,8 @@ gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
 # Flexible authentication solution for Rails with Warden (https://github.com/plataformatec/devise)
 gem 'devise'
+# ActiveRecord backend for DelayedJob (http://github.com/collectiveidea/delayed_job_active_record)
+gem 'delayed_job_active_record'
 # Simple Rails app configuration (https://github.com/laserlemon/figaro)
 gem 'figaro'
 # Font-Awesome SASS (https://github.com/FortAwesome/font-awesome-sass)
@@ -37,8 +39,6 @@ gem 'puma'
 gem 'sass-rails', '~> 5.0'
 # A gem that allows simple integration of ActionMailer with SendGrid (http://sendgrid.com) (http://github.com/stephenb/sendgrid)
 gem 'sendgrid'
-# Simple, efficient background processing for Ruby (http://sidekiq.org)
-gem 'sidekiq'
 # Classy web-development dressed in a DSL (http://www.sinatrarb.com/)
 gem 'sinatra', require: false
 # Forms made easy! (https://github.com/plataformatec/simple_form)
@@ -91,6 +91,7 @@ end
 group :test do
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/jnicklas/capybara)
   gem 'capybara'
+  # Uploads Ruby test coverage data to Code Climate. (https://github.com/codeclimate/ruby-test-reporter)
   gem 'codeclimate-test-reporter', require: nil
   # Strategies for cleaning databases.  Can be used to ensure a clean state for testing. (http://github.com/DatabaseCleaner/database_cleaner)
   gem 'database_cleaner'
