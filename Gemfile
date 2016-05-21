@@ -9,6 +9,7 @@ gem 'rails', '4.2.6'
 gem 'bootstrap-sass'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
 gem 'coffee-rails', '~> 4.1.0'
+# A toolkit to create and control daemons in different ways (http://daemons.rubyforge.org)
 gem 'daemons'
 # Flexible authentication solution for Rails with Warden (https://github.com/plataformatec/devise)
 gem 'devise'
