@@ -1,30 +1,3 @@
-/ Navigation
-%nav.navbar.navbar-default.navbar-fixed-top.topnav{:role => "navigation"}
-  .container.topnav
-    / Brand and toggle get grouped for better mobile display
-    .navbar-header
-      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand.topnav{:href => "#"} Mililani High School Color Guard
-    / Collect the nav links, forms, and other content for toggling
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "#about"} About
-        %li
-          %a{:href => "#services"} Services
-        %li
-          %a{:href => "#contact"} Contact
-        %li
-          =link_to 'Login', new_user_session_path
-        %li
-          =link_to 'Logout', destroy_user_session_path, method: :delete
-    / /.navbar-collapse
-  / /.container
-/ Header
 %a{:name => "about"}
 .intro-header
   .container
@@ -47,9 +20,6 @@
               %a.btn.btn-default.btn-lg{:href => "#"}
                 %i.fa.fa-linkedin.fa-fw
                 %span.network-name Linkedin
-  / /.container
-/ /.intro-header
-/ Page Content
 %a{:name => "services"}
 .content-section-a
   .container
@@ -67,8 +37,6 @@
           for providing the photographs that you see in this template. Visit their website to become a member.
       .col-lg-5.col-lg-offset-2.col-sm-6
         %img.img-responsive{:alt => "", :src => "http://ironsummitmedia.github.io/startbootstrap-landing-page/img/ipad.png"}/
-  / /.container
-/ /.content-section-a
 .content-section-b
   .container
     .row
@@ -85,8 +53,6 @@
             %a{:href => "http://www.psdcovers.com/", :target => "_blank"} PSDCovers
       .col-lg-5.col-sm-pull-6.col-sm-6
         %img.img-responsive{:alt => "", :src => "http://ironsummitmedia.github.io/startbootstrap-landing-page/img/dog.png"}/
-  / /.container
-/ /.content-section-b
 .content-section-a
   .container
     .row
@@ -105,8 +71,6 @@
             %a{:href => "http://fontawesome.io", :target => "_blank"} icons from Font Awesome
       .col-lg-5.col-lg-offset-2.col-sm-6
         %img.img-responsive{:alt => "", :src => "http://ironsummitmedia.github.io/startbootstrap-landing-page/img/phones.png"}/
-  / /.container
-/ /.content-section-a
 %a{:name => "contact"}
 .banner
   .container
@@ -127,9 +91,6 @@
             %a.btn.btn-default.btn-lg{:href => "#"}
               %i.fa.fa-linkedin.fa-fw
               %span.network-name Linkedin
-  / /.container
-/ /.banner
-/ Footer
 %footer
   .container
     .row
