@@ -1,0 +1,10 @@
+%li
+  %a{href: "#about"} About
+%li
+  %a{href: "#contact"} Contact
+- unless user_session
+  %li
+    =link_to 'Login', new_user_session_path
+- if user_session
+  %li
+    =link_to 'Logout', destroy_user_session_path, method: :delete
