@@ -4,7 +4,9 @@
   %a{href: "#contact"} Contact
 - unless user_session
   %li
-    =link_to 'Login', new_user_session_path
+    =link_to 'Sign in', new_user_session_path
 - if user_session
   %li
-    =link_to 'Logout', destroy_user_session_path, method: :delete
+    =link_to 'Edit account', edit_user_registration_path
+  %li
+    =link_to 'Sign out', destroy_user_session_path, method: :delete

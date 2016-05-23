@@ -11,6 +11,6 @@ RSpec.feature 'Navigation links', :devise do
   scenario 'view navigation links' do
     visit root_path
     expect(page).to have_content 'Mililani High School Color Guard'
-    expect(page).to have_content 'Login'
+    expect(page).to have_content 'Sign in'
   end
 end
