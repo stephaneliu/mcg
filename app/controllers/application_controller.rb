@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
     session[:previous_url] || dashboard_url
   end
 
-  def after_sign_out_path_for(resource)
-    after_sign_in_path_for(resource)
+  def after_sign_out_path_for(_resource)
+    root_url
   end
 
   def interacting_with_authentication

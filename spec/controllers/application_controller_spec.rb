@@ -13,6 +13,10 @@ RSpec.describe ApplicationController do
     end
   end
 
+  describe '#after_sign_out_path_for' do
+    it { expect(subject.after_sign_out_path_for('')).to eq(root_url) }
+  end
+
   describe '#interacting_with_authentication' do
     context 'when request path includes users' do
       before { allow(controller.request).to receive(:fullpath).and_return('//users/sign_in') }
