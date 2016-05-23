@@ -10,8 +10,7 @@ RSpec.feature 'Navigation links', :devise do
   #   Then I see "home," "sign in," and "sign up"
   scenario 'view navigation links' do
     visit root_path
-    expect(page).to have_content 'Home'
+    expect(page).to have_content 'Mililani High School Color Guard'
     expect(page).to have_content 'Login'
-    expect(page).to have_content 'Logout'
   end
 end
