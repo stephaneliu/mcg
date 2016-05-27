@@ -101,6 +101,10 @@ group :test do
   gem 'launchy'
   # PhantomJS driver for Capybara (https://github.com/teampoltergeist/poltergeist)
   gem 'poltergeist'
+  # Making tests easy on the fingers and eyes (http://thoughtbot.com/community/)
+  gem 'shoulda-matchers', '~>3.1'
+  # A gem providing "time travel" and "time freezing" capabilities, making it dead simple to test time-dependent code.  It provides a unified method to mock Time.now, Date.today, and DateTime.now in a single call. (https://github.com/travisjeffery/timecop)
+  gem 'timecop'
 end
 
 group :development, :test do
