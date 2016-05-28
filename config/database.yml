@@ -17,12 +17,12 @@ default: &default
 
 development:
   <<: *default
-  # database: mcg_development
-  database: db/development.sqlite3
+  database: mcg_development
+  # database: db/development.sqlite3
 test:
   <<: *default
-  # database: mcg_test
-  database: db/test.sqlite3
+  database: mcg_test
+  # database: db/test.sqlite3
 production:
   <<: *mysql
   url: <%= ENV['DATABASE_URL'] %>
