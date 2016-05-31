@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationController do
+  describe '#verify_authorized', :pending do
+    it 'is implemented' do
+      expect(subject).to receive(:after_action).with(:verify_authorized)
+    end
+  end
+
   describe '#after_sign_in_path_for' do
     context 'when previous_url exists' do
       before             { @request.session[:previous_url] = previous_url }
