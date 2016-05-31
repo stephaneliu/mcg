@@ -43,12 +43,12 @@ class ApplicationPolicy
     attr_reader :user, :scope
 
     def initialize(user, scope)
-      @user = user
+      @user  = user
       @scope = scope
     end
 
     def resolve
-      scope
+      scope.none
     end
   end
 end
