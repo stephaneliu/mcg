@@ -18,7 +18,7 @@ class Event < ActiveRecord::Base
   validates :name, presence: true
   validate :starts_before_ends
 
-  scope :active, -> { where('ends > ?', Time.zone.now) }
+  scope :active, -> { where('starts > ?', Time.zone.now) }
 
   def starts_before_ends
     return true if starts.blank? || ends.blank?

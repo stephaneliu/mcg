@@ -88,11 +88,12 @@ RSpec.describe Event, type: :model do
 
   describe 'scopes' do
     describe 'active' do
-      let!(:past_event)    { create(:event, name: 'past', ends: 1.day.ago) }
-      let!(:present_event) { create(:event, name: 'present', ends: 1.hour.from_now) }
-      let!(:future_event)  { create(:event, name: 'future', ends: 1.day.from_now) }
+      let!(:past_event)    { create(:event, name: 'past', starts: 1.day.ago) }
+      let!(:present_event) { create(:event, name: 'present', starts: 1.hour.from_now) }
+      let!(:future_event)  { create(:event, name: 'future', starts: 1.day.from_now) }
 
       subject { described_class.active.pluck(:name) }
+
       specify do
         expect(subject.size).to eq(2)
         is_expected.to include present_event.name
