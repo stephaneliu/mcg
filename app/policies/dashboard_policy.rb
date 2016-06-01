@@ -1,5 +1,5 @@
 class DashboardPolicy < ApplicationPolicy
   def show?
-    user.admin? || user.advisor? || user.captain? || user.guard?
+    role_at_least_user?
   end
 end

@@ -17,9 +17,7 @@ RSpec.describe UsersController do
     before     { xhr :get, :edit, id: user.id }
     let(:user) { create :user }
 
-    it do
-      expect(assigns(:user)).to eq(user)
-    end
+    specify { expect(assigns(:user)).to eq(user) }
   end
 
   describe '#update' do
