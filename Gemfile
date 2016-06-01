@@ -7,11 +7,13 @@ gem 'rails', '4.2.6'
 # bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications. (https://github.com/twbs/bootstrap-sass)
 # Twitter's Bootstrap, converted to Sass and ready to drop into Rails or Compass (http://github.com/thomas-mcdonald/bootstrap-sass)
 # bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications. (https://github.com/twbs/bootstrap-sass)
+# Twitter's Bootstrap, converted to Sass and ready to drop into Rails or Compass (http://github.com/thomas-mcdonald/bootstrap-sass)
 gem 'bootstrap-sass'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
 gem 'coffee-rails', '~> 4.1.0'
 # A toolkit to create and control daemons in different ways (http://daemons.rubyforge.org)
 # A toolkit to create and control daemons in different ways (https://github.com/thuehlinger/daemons)
+# A toolkit to create and control daemons in different ways (http://daemons.rubyforge.org)
 gem 'daemons'
 # Flexible authentication solution for Rails with Warden (https://github.com/plataformatec/devise)
 gem 'devise'
@@ -32,10 +34,12 @@ gem 'high_voltage'
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
 # Create JSON structures via a Builder-style DSL
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
+# Create JSON structures via a Builder-style DSL
 gem 'jbuilder', '~> 2.0'
 # Use jQuery with Rails 4+ (http://rubygems.org/gems/jquery-rails)
 # Use jQuery with Rails 3 (http://rubygems.org/gems/jquery-rails)
 # Use jQuery with Rails 4+ (http://rubygems.org/gems/jquery-rails)
+# Use jQuery with Rails 3 (http://rubygems.org/gems/jquery-rails)
 gem 'jquery-rails'
 # A simple, fast Mysql library for Ruby, binding to libmysql (http://github.com/brianmario/mysql2)
 gem 'mysql2', '~> 0.3.18'
@@ -45,6 +49,8 @@ gem 'puma'
 gem 'sass-rails', '~> 5.0'
 # A gem that allows simple integration of ActionMailer with SendGrid (http://sendgrid.com) (http://github.com/stephenb/sendgrid)
 gem 'sendgrid'
+# Extends Rails seeds to split out complex seeds into their own file and have different seeds for each environment. (http://github.com/james2m/seedbank)
+gem 'seedbank'
 # Classy web-development dressed in a DSL (http://www.sinatrarb.com/)
 gem 'sinatra', require: false
 # Forms made easy! (https://github.com/plataformatec/simple_form)
@@ -88,6 +94,7 @@ group :development do
   # Rails application preloader (https://github.com/rails/spring)
   # Rails application preloader (http://github.com/rails/spring)
   # Rails application preloader (https://github.com/rails/spring)
+  # Rails application preloader (http://github.com/rails/spring)
   gem 'spring'
   # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
   gem 'spring-commands-rspec'
