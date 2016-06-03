@@ -54,4 +54,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = true
+
+  puts 'Enabling Live Reload'
+  # config.middleware.use Rack::LiveReload
+  config.middleware.insert_before Rack::Lock, Rack::LiveReload
 end
