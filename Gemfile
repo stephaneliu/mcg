@@ -77,6 +77,7 @@ group :development do
   # Command-line wrapper for git and GitHub (http://hub.github.com/)
   gem 'hub', require:nil
   # Turns off Rails asset pipeline log. (http://github.com/evrone/quiet_assets)
+  gem 'nokogiri', '>= 1.6.8'
   gem 'quiet_assets'
   # Insert LiveReload into your app easily as Rack middleware
   gem 'rack-livereload'
@@ -133,4 +134,3 @@ group :production do
   # Following best practices from http://12factor.net run a maintainable, clean, and scalable app on Rails (https://github.com/heroku/rails_12factor)
   gem 'rails_12factor'
 end
-gem 'nokogiri', '>= 1.6.8'
