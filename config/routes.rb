@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :edit, :show, :update, :destroy]
 
   resource :dashboard, only: [:show]
+
+  get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
 end
