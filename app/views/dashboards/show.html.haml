@@ -1,14 +1,15 @@
 - @events.in_groups_of(4, false) do |event_group|
   .row
     .col-md-1.pull-right
-      %i.fa.fa-plus
+      =link_to '#' do
+        %i.fa.fa-plus.fa-lg
   .row
     - event_group.each do |event|
       .col-md-3
         .panel.panel-primary
           .panel-heading
             =event.name
-            at
-            =event.starts.to_s(:pretty)
+            .pull-right
+              =event.starts.to_s(:pretty)
           .panel-body
             =event.description
