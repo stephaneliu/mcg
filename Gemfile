@@ -1,17 +1,14 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-# Full-stack web application framework. (http://www.rubyonrails.org)
+# Full-stack web application framework. (http://rubyonrails.org)
 gem 'rails', '4.2.6'
 
 # bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications. (https://github.com/twbs/bootstrap-sass)
-# Twitter's Bootstrap, converted to Sass and ready to drop into Rails or Compass (http://github.com/thomas-mcdonald/bootstrap-sass)
-# Twitter's Bootstrap, converted to Sass and ready to drop into Rails or Compass (https://github.com/twbs/bootstrap-sass)
 gem 'bootstrap-sass'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
 gem 'coffee-rails', '~> 4.1.0'
-# A toolkit to create and control daemons in different ways (http://daemons.rubyforge.org)
-# A toolkit to create and control daemons in different ways (http://daemons.rubyforge.org)
+# A toolkit to create and control daemons in different ways (https://github.com/thuehlinger/daemons)
 gem 'daemons'
 # Flexible authentication solution for Rails with Warden (https://github.com/plataformatec/devise)
 gem 'devise'
@@ -70,14 +67,15 @@ group :development do
   # Guard plugin for RuboCop (https://github.com/yujinakayama/guard-rubocop)
   gem 'guard-rubocop'
   # Guard gem for RSpec (https://github.com/guard/guard-rspec)
-  # Guard gem for RSpec (https://rubygems.org/gems/guard-rspec)
   gem 'guard-rspec'
   # Converts HTML into Haml (http://haml.info)
   gem 'html2haml'
   # Command-line wrapper for git and GitHub (http://hub.github.com/)
   gem 'hub', require:nil
   # Turns off Rails asset pipeline log. (http://github.com/evrone/quiet_assets)
+  # Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser (http://nokogiri.org)
   gem 'nokogiri', '>= 1.6.8'
+  # Turns off Rails asset pipeline log. (http://github.com/evrone/quiet_assets)
   gem 'quiet_assets'
   # Insert LiveReload into your app easily as Rack middleware
   gem 'rack-livereload'
@@ -101,7 +99,6 @@ end
 
 group :test do
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/jnicklas/capybara)
-  # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (http://github.com/jnicklas/capybara)
   gem 'capybara'
   # Uploads Ruby test coverage data to Code Climate. (https://github.com/codeclimate/ruby-test-reporter)
   gem 'codeclimate-test-reporter', require: nil
@@ -128,7 +125,7 @@ group :development, :test do
   gem 'pry-rails'
   # Open a pry session on any unhandled exceptions (https://github.com/ConradIrwin/pry-rescue)
   gem 'pry-rescue'
-  # RSpec for Rails (http://github.com/rspec/rspec-rails)
+  # RSpec for Rails (https://github.com/rspec/rspec-rails)
   gem 'rspec-rails'
   # Automatic Ruby code style checking tool. (http://github.com/bbatsov/rubocop)
   gem 'rubocop'
