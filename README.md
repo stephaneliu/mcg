@@ -11,6 +11,8 @@ provided by the [RailsApps Project](http://railsapps.github.io/).
 
 Rails Composer is supported by developers who purchase our RailsApps tutorials.
 
+Small change
+
 Problems? Issues?
 -----------
 
